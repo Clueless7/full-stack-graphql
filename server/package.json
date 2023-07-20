@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "pnpm clean && npm run compile && node ./dist/index.js",
+    "dev": "nodemon --watch src -e ts,js,json --exec \"pnpm start\"",
+    "generate": "graphql-codegen",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.7.5",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.7.1",
+    "rimraf": "^5.0.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^4.0.1",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@types/node": "^20.4.2",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  }
+}
